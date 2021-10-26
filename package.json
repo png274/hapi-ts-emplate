@@ -7,7 +7,7 @@
     "build": "tsc",
     "lint": "npx eslint . --ext .ts",
     "prestart": "npm run build",
-    "start:dev": "npx nodemon ./src/index.ts",
+    "start:dev": "npx nodemon -r tsconfig-paths/register ./src/index.ts",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hapi/boom": "^9.1.4",
     "@hapi/hapi": "^20.1.5",
     "@types/hapi": "^18.0.6",
     "nodemon": "^2.0.14",
@@ -31,6 +32,7 @@
     "@typescript-eslint/parser": "^5.1.0",
     "eslint": "^8.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "tsconfig-paths": "^3.11.0"
   }
 }
